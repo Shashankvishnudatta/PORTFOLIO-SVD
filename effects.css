@@ -1,0 +1,35 @@
+/* Hologram Scan-Line Effect */
+@keyframes scanline {
+  0% { background-position: 0 0; }
+  100% { background-position: 0 100%; }
+}
+
+.hologram-text {
+  position: relative;
+  display: inline-block;
+  color: #00f3ff;
+  background: linear-gradient(90deg, rgba(0,243,255,0.15) 25%, rgba(255,255,255,0.2) 50%, rgba(0,243,255,0.15) 75%);
+  background-size: 100% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: scanline 2s linear infinite;
+}
+
+/* Glitch Text Effect */
+@keyframes glitch {
+  0% { transform: translate(0); }
+  20% { transform: translate(-2px, 2px); }
+  40% { transform: translate(2px, -2px); }
+  60% { transform: translate(-2px, -2px); }
+  80% { transform: translate(2px, 2px); }
+  100% { transform: translate(0); }
+}
+
+.glitch-text {
+  position: relative;
+  color: #00f3ff;
+  text-shadow:
+    2px 0 #f0f, 
+   -2px 0 #0ff;
+  animation: glitch 1s infinite;
+}
